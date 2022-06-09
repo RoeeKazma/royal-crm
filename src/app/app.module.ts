@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ContentComponent } from './components/content/content.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { ContentComponent } from './components/content/content.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    ContentComponent,
+    ContactsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
