@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { PageHeaderComponent } from './utils/page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     NavbarComponent,
     SidebarComponent,
     ContactsComponent,
+    PageHeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
