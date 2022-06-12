@@ -8,6 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageHeaderComponent } from './utils/page-header/page-header.component';
+import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CustomersComponent } from './components/customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { PageHeaderComponent } from './utils/page-header/page-header.component';
     SidebarComponent,
     ContactsComponent,
     PageHeaderComponent,
+    ParagraphCapitalPipe,
+    PageNotFoundComponent,
+    CustomersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
