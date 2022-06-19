@@ -14,10 +14,12 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CustomersComponent } from './components/customers/customers.component';
 import { HttpTutComponent } from './components/http-tut/http-tut.component';
 import { CustomersNewComponent } from './components/customers-new/customers-new.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { FormsComponent } from './components/forms/forms.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,17 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     CustomersComponent,
     HttpTutComponent,
     CustomersNewComponent,
+    FormsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

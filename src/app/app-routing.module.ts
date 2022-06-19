@@ -5,6 +5,7 @@ import { CustomersComponent } from './components/customers/customers.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpTutComponent } from './components/http-tut/http-tut.component';
 import { CustomersNewComponent } from './components/customers-new/customers-new.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'http-tut',
     component: HttpTutComponent,
+  },
+  {
+    path: 'tut/forms',
+    component: FormsComponent,
   },
   {
     path: 'page-not-found',

@@ -27,6 +27,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bi bi-emoji-sunglasses-fill',
       link: 'http-tut',
     },
+    {
+      title: 'Forms Tutorial',
+      icon: 'bi bi-emoji-sunglasses-fill',
+      link: 'tut/forms',
+    },
   ];
   defaultIcon: string = 'bi bi-person';
   constructor() {}
