@@ -4,6 +4,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpTutComponent } from './components/http-tut/http-tut.component';
+import { CustomersNewComponent } from './components/customers-new/customers-new.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'customers',
     component: CustomersComponent,
+  },
+  {
+    path: 'customers/new',
+    component: CustomersNewComponent,
   },
   {
     path: 'contacts',

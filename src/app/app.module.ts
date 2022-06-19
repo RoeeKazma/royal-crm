@@ -13,6 +13,11 @@ import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { HttpTutComponent } from './components/http-tut/http-tut.component';
+import { CustomersNewComponent } from './components/customers-new/customers-new.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -26,8 +31,9 @@ import { HttpTutComponent } from './components/http-tut/http-tut.component';
     PageNotFoundComponent,
     CustomersComponent,
     HttpTutComponent,
+    CustomersNewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
   providers: [],
   bootstrap: [AppComponent],
 })
