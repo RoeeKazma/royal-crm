@@ -1,37 +1,64 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { CustomersComponent } from './components/customers/customers.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HttpTutComponent } from './components/http-tut/http-tut.component';
+import { CustomersDetailsComponent } from './components/customers-details/customers-details.component';
+import { CustomersEditComponent } from './components/customers-edit/customers-edit.component';
 import { CustomersNewComponent } from './components/customers-new/customers-new.component';
+import { CustomersComponent } from './components/customers/customers.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { HttpTutComponent } from './components/http-tut/http-tut.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'customers',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: 'customers',
-    component: CustomersComponent,
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path: 'customers/new',
-    component: CustomersNewComponent,
-  },
-  {
-    path: 'contacts',
-    component: ContactsComponent,
-  },
-  {
-    path: 'http-tut',
-    component: HttpTutComponent,
-  },
-  {
-    path: 'tut/forms',
-    component: FormsComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'customers',
+        pathMatch: 'full',
+      },
+      {
+        path: 'customers',
+        component: CustomersComponent,
+      },
+      {
+        path: 'customers/new',
+        component: CustomersNewComponent,
+      },
+      {
+        path: 'customers/:id',
+        component: CustomersDetailsComponent,
+      },
+      {
+        path: 'customers/:id/edit',
+        component: CustomersEditComponent,
+      },
+      {
+        path: 'contacts',
+        component: ContactsComponent,
+      },
+      {
+        path: 'tut/http',
+        component: HttpTutComponent,
+      },
+      {
+        path: 'tut/forms',
+        component: FormsComponent,
+      },
+    ],
   },
   {
     path: 'page-not-found',

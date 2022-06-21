@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-page-not-found',
   template: `
+    <header>
+      <app-navbar></app-navbar>
+    </header>
     <app-page-header
       title="page not found"
       icon="bi bi-exclamation-lg"

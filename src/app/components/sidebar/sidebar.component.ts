@@ -23,12 +23,12 @@ export class SidebarComponent implements OnInit {
       link: 'year-end-sale',
     },
     {
-      title: 'HTTP Tutorial',
+      title: 'HTTP Test',
       icon: 'bi bi-emoji-sunglasses-fill',
-      link: 'http-tut',
+      link: 'tut/http',
     },
     {
-      title: 'Forms Tutorial',
+      title: 'Forms Test',
       icon: 'bi bi-emoji-sunglasses-fill',
       link: 'tut/forms',
     },

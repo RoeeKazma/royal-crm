@@ -1,7 +1,7 @@
 <app-page-header
-  title="add customer"
-  description="add a new customer"
-  icon="bi bi-person-plus"
+  title="Edit Customer"
+  description="Edit a Customer"
+  icon="bi bi-pencil-fill"
 ></app-page-header>
 
 <div class="row mt-5">
@@ -167,17 +167,12 @@
       <div class="row justify-content-center">
         <div class="bg-light p-3 text-center">
           <a routerLink=".." class="btn btn-secondary">Cancel</a>
-          <input
-            type="button"
-            value="Reset"
-            class="btn btn-secondary ms-3"
-            (click)="reset(customerForm)"
-          />
+
           <input
             type="submit"
             value="Save"
-            class="btn btn-primary ms-3"
             [disabled]="customerForm.invalid"
+            class="btn btn-primary ms-3"
           />
         </div>
       </div>
