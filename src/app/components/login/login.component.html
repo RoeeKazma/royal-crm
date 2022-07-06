@@ -60,7 +60,6 @@
 
       <button
         [disabled]="loginForm.invalid"
-        (click)="authService.loginEmail(form.email, form.password)"
         class="btn btn-lg btn-primary btn-block"
         type="submit"
       >
@@ -70,20 +69,10 @@
 
     <hr />
 
-    <button
-      class="btn btn-lg btn-primary btn-block"
-      (click)="authService.loginGoogle()"
-    >
+    <button appSignWithGoogle class="btn btn-lg btn-primary btn-block">
       Log in with Google
     </button>
 
     <p class="mt-5 mb-3 text-muted text-center">&copy; 2019-2020</p>
   </div>
 </div>
-
-<pre>
-    {{ authService.user$ | async | json }}
-  </pre
->
-
-<button (click)="authService.logout()">Logout</button>

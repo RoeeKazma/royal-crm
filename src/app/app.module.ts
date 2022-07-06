@@ -24,6 +24,8 @@ import { CustomersDetailsComponent } from './components/customers-details/custom
 import { CustomersEditComponent } from './components/customers-edit/customers-edit.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignWithGoogleDirective } from './directives/sign-with-google.directive';
+import { SignOutDirective } from './directives/sign-out.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     CustomersEditComponent,
     LoginComponent,
     DashboardComponent,
+    SignWithGoogleDirective,
+    SignOutDirective,
   ],
   imports: [
     BrowserModule,

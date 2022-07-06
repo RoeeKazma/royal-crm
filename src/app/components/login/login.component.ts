@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -15,11 +16,23 @@ export class LoginComponent implements OnInit {
 
   error = '';
 
-  onSubmit(form: NgForm) {
-    console.log(this.form);
+  async onSubmit({ valid }: NgForm) {
+    if (!valid) {
+      return;
+    }
+
+    try {
+      await this.authService.loginEmail(this.form.email, this.form.password);
+      this.routerService.navigate(['/dashboard']);
+    } catch (err) {
+      this.error = (err as Error).message;
+    }
   }
 
-  constructor(public authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private routerService: Router
+  ) {}
 
   ngOnInit(): void {}
 }
