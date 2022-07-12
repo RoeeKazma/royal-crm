@@ -22,16 +22,16 @@ export class SidebarComponent implements OnInit {
       icon: 'bi bi-emoji-sunglasses-fill',
       link: 'year-end-sale',
     },
-    {
-      title: 'HTTP Test',
-      icon: 'bi bi-emoji-sunglasses-fill',
-      link: 'tut/http',
-    },
-    {
-      title: 'Forms Test',
-      icon: 'bi bi-emoji-sunglasses-fill',
-      link: 'tut/forms',
-    },
+    // {
+    //   title: 'HTTP Test',
+    //   icon: 'bi bi-emoji-sunglasses-fill',
+    //   link: 'tut/http',
+    // },
+    // {
+    //   title: 'Forms Test',
+    //   icon: 'bi bi-emoji-sunglasses-fill',
+    //   link: 'tut/forms',
+    // },
   ];
   defaultIcon: string = 'bi bi-person';
   constructor() {}

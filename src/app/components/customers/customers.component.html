@@ -9,7 +9,10 @@
     <input
       type="text"
       class="form-control"
-      placeholder="Search customer by phone number"
+      placeholder="Search customer by Phone number, Email or Name"
+      name="search"
+      autocomplete="off"
+      [(ngModel)]="searchText"
     />
   </div>
 
@@ -37,7 +40,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let customer of customers; index as idx">
+          <tr
+            *ngFor="
+              let customer of customers | filter: searchText;
+              index as idx
+            "
+          >
             <td>
               {{ idx + 1 }}.
               <a [routerLink]="['./', customer.id, 'edit']">

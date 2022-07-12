@@ -9,6 +9,7 @@ import { ContactsService } from 'src/app/services/contacts.service';
 })
 export class ContactsComponent implements OnInit {
   contacts: Contact[] = [];
+  searchText: any;
 
   constructor(private contactsService: ContactsService) {
     this.contacts = this.contactsService.getContacts();

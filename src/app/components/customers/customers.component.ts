@@ -14,6 +14,7 @@ export class CustomersComponent implements OnInit {
   constructor(private customersService: CustomersService) {
     this.customers$ = this.customersService.getAll();
   }
+  searchText: any;
 
   remove(id: string) {
     // if (!id) {

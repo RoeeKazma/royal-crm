@@ -5,6 +5,19 @@
 >
 </app-page-header>
 
+<div class="row mt-4">
+  <div class="col-12">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search contact by Phone number, Email or Name"
+      name="search"
+      autocomplete="off"
+      [(ngModel)]="searchText"
+    />
+  </div>
+</div>
+
 <table class="table table-bordered align-middle mt-3">
   <thead>
     <tr>
@@ -16,7 +29,7 @@
     </tr>
   </thead>
   <tbody *ngIf="contacts.length; else noContacts">
-    <tr *ngFor="let contact of contacts; index as i">
+    <tr *ngFor="let contact of contacts | filter: searchText; index as i">
       <td>{{ i + 1 }}</td>
       <td>{{ contact.name | titlecase }}</td>
       <td>
