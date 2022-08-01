@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "royal-crm-4bf5f": {
+      "hosting": {
+        "royal-crm": [
+          "royal-crm-4bf5f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "royal-crm-4bf5f"
+  }
+}
